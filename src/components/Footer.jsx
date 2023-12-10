@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="flex flex-col items-center mb-4 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start">
 
                     <div className="space-y-8 md:items-start md:space-y-5">
-                        <p class="h-8">
+                        <p className="h-8">
                             Tous droits réservés &copy; {footerYear}
                         </p>
                     </div>
