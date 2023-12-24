@@ -3,7 +3,6 @@ import { BASE_URL } from '../constant';
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
 
-
 export const githubUsersApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         getAllUsers: builder.query({
@@ -27,6 +26,18 @@ export const githubUsersApiSlice = apiSlice.injectEndpoints({
         getprofile: builder.query({
             query: (login) => ({
                 url: `${BASE_URL}/users/${login}`,
+                params: { sort: 'created', per_page: 10 },
+            }),
+            headers : {
+                'user-agent': 'node.js',
+                 Authorization: `token ${GITHUB_TOKEN}`,
+            },
+            keepUnusedDataFor: 5,
+            providesTags: ['Users']
+        }),
+        getUserRepos: builder.query({
+            query: (login) => ({
+                url: `${BASE_URL}/users/${login}/repos`,
             }),
             headers : {
                 'user-agent': 'node.js',
@@ -42,4 +53,5 @@ export const {
     useGetAllUsersQuery,
     useGetUserQuery,
     useGetprofileQuery,
+    useGetUserReposQuery
 } = githubUsersApiSlice

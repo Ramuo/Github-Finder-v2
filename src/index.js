@@ -19,6 +19,7 @@ import NotFound from './pages/NotFound';
 import User from './pages/User';
 
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App/>}>

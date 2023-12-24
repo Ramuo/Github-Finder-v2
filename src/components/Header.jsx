@@ -24,8 +24,8 @@ const Header = () => {
               </label>
               <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-neutral rounded-box w-52">
                 <li>
-                  <Link  to='#!' className="justify-between">
-                    Profil
+                  <Link  to='/' className="justify-between">
+                    Profils
                     <span className="badge">New</span>
                   </Link>
                 </li>
