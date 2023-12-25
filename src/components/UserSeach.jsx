@@ -6,8 +6,6 @@ import { useGetUserQuery } from '../slices/githubUsersApiSlice';
 
 
 
-
-
 const UserSeach = ({user}) => {
   const [keyword, setKeyword] = useState('');
 
@@ -26,7 +24,8 @@ const UserSeach = ({user}) => {
     if(keyword === ''){
       alert('Saisissez un nom de Profil')
     }else{
-      
+      // @to do search users
+     
       setKeyword('');
     }
   }
